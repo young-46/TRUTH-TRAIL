@@ -45,7 +45,7 @@ public class LoadingScene : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "Start"){
             SceneLoaderPrefab.transform.Find("info").gameObject.SetActive(true);
         }
-        if(SceneManager.GetActiveScene().name == "Death ]"){
+        if(SceneManager.GetActiveScene().name == "Death"){
             SceneLoaderPrefab.transform.GetChild(0).gameObject.SetActive(false);
             SceneLoaderPrefab.transform.GetChild(1).gameObject.SetActive(false);
             SceneLoaderPrefab.transform.GetChild(2).gameObject.SetActive(false);

@@ -33,6 +33,7 @@ public class AlleyNav : MonoBehaviour
     [SerializeField] LayerMask TargetMask;
     [SerializeField] LayerMask ObstacleMask;
     AlleySpot alleySpot;
+    private float time;
     // Start is called before the first frame update
     void OnDrawGizmos() {
         if (!DebugMode) return;
@@ -83,6 +84,7 @@ public class AlleyNav : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        time += Time.deltaTime;
         if (state == State.Idle)
         {
             UpdateIdle();
@@ -91,7 +93,7 @@ public class AlleyNav : MonoBehaviour
         {
             UpdateWalk();
         }
-        else if (state == State.Attack && Attack_state)
+        else if (state == State.Attack && Attack_state && time > 20)
         {
             UpdateAttack();
         }

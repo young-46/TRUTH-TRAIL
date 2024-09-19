@@ -2697,6 +2697,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1757439577612981822, guid: 252f3013f2ddd4bec90224cf37fd6b9a, type: 3}
+      propertyPath: walkSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1757439577612981822, guid: 252f3013f2ddd4bec90224cf37fd6b9a, type: 3}
       propertyPath: inventoryUI
       value: 
       objectReference: {fileID: 1674625909}
@@ -11608,6 +11612,15 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1884710297602306, guid: 0408eb392f6850340809db1a980a2d30, type: 3}
   m_PrefabInstance: {fileID: 995717380}
   m_PrefabAsset: {fileID: 0}
+--- !u!45 &342274501
+Skybox:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342274500}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 0}
 --- !u!195 &342274502
 NavMeshAgent:
   m_ObjectHideFlags: 0

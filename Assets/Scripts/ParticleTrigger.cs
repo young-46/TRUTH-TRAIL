@@ -70,13 +70,17 @@ public class ParticleTrigger : MonoBehaviour
             }
         }
         else if(this.name == "p_spot_4"){
+            particle.Play();
             if(LayerMask.LayerToName(GameObject.Find("Alley_Tuto").layer) != "Ignore Raycast"){
-                particle.Play();
                 agent.SetDestination(GameObject.Find("p_spot_5").transform.position);
                 while(door.position != target){
                     door.position = Vector3.Lerp(door.position, target, Time.deltaTime*5.0f);
                     yield return new WaitForSeconds(0.01f);
                 }
+            }
+            else{
+                particle.gameObject.SetActive(true);
+                agent.SetDestination(GameObject.Find("p_spot_6").transform.position);
             }
         }
         else if(this.name == "p_spot_5"){

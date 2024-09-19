@@ -103,7 +103,7 @@ public class Curses : MonoBehaviour
             changeCamera.SwitchToVirtualCamera();
             ending=true;
             ClearCurse();
-            //StartCoroutine(Death());
+            StartCoroutine(Death());
         }
     }
     private void TimeCurse(float timer)
@@ -120,7 +120,7 @@ public class Curses : MonoBehaviour
             ending=true;
             changeCamera.SwitchToVirtualCamera();
             ClearTimer();
-          //  StartCoroutine(Death());
+           StartCoroutine(Death());
 
         }
     }
@@ -141,7 +141,7 @@ public class Curses : MonoBehaviour
         GameObject.Find("Alley_close").GetComponent<AlleyNav>().DeadCurse();
         ending=true;
         changeCamera.SwitchToVirtualCamera();
-        //StartCoroutine(Death());
+        StartCoroutine(Death());
     }
     private void ClearTimer()
     {
@@ -152,9 +152,9 @@ public class Curses : MonoBehaviour
             activeTimer = false;
         }
     }
-    /*IEnumerator Death(){
+    IEnumerator Death(){
         yield return new WaitForSeconds(1.5f);
         Time.timeScale = 0;
         LoadingScene.Instance.LoadScene("Death");
-    }*/
+    }
 }
